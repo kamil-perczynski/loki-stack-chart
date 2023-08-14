@@ -15,3 +15,9 @@ loki:
     replicas: 3
     persistence:
       enabled: false
+    extraVolumes:
+      - name: bolt-db
+        emptyDir: {}
+    extraVolumeMounts:
+      - name: bolt-db
+        mountPath: /var/loki
