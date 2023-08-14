@@ -21,3 +21,8 @@ loki:
     extraVolumeMounts:
       - name: bolt-db
         mountPath: /var/loki
+  monitoring:
+    selfMonitoring:
+      enabled: true
+      grafanaAgent:
+        installOperator: false
