@@ -1,0 +1,17 @@
+loki:
+  loki:
+    commonConfig:
+      replication_factor: 3
+    storage:
+      bucketNames:
+        chunks: k8s-loki-chunks-5bksa
+        ruler: k8s-loki-ruler-5bksa
+      type: s3
+      s3:
+        s3ForcePathStyle: false
+        insecure: false
+        region: eu-central-1
+  singleBinary:
+    replicas: 3
+    persistence:
+      enabled: false
